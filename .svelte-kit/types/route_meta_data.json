@@ -1,5 +1,8 @@
 {
+	"/(public)": [
+		"src/routes/(public)/+page.server.ts"
+	],
 	"/": [],
-	"/categories": [],
-	"/items": []
+	"/(protected)/categories": [],
+	"/(protected)/items": []
 }

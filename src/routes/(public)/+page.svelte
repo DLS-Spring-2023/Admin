@@ -1,10 +1,6 @@
 <script>
-  let username = "";
-  let password = "";
-
-  function handleSubmit() {
-    alert(`Username: ${username}\nPassword: ${password}`);
-  }
+/** @type {import('./$types').ActionData} */
+export let form;
 </script>
 
 <style>
@@ -41,6 +37,21 @@ background-color: #ADD8E6
     color: #fff;
     border: none;
   }
+
+  p {
+    color:red;
+    margin: 0;
+    padding: 0;
+  }
+
+  .error{
+    margin-top: 20px;
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+  }
 </style>
 
 <body>
@@ -50,12 +61,19 @@ background-color: #ADD8E6
 <h2>Please log in </h2>
 
 
-  <label for="username">Username:</label>
-  <input type="text" id="username" bind:value={username}>
+<form class="form" method="POST">
+  
+ 
+  <label for="username">Email:</label>
+  <input type="email" id="email" name="email"> 
+  
 
   <label for="password">Password:</label>
-  <input type="password" id="password" bind:value={password}>
+  <input type="password" id="password" name="password"> 
+  <button type="submit">Login</button> 
 
-  <button on:click={handleSubmit}>Login</button>
+  {#if form?.missing}<p class="error">Please provide a correct email</p>{/if}
+  {#if form?.incorrect}<p class="error">Password or email incorrect. Try again</p>{/if}
+</form>
 </div>
 </body>
