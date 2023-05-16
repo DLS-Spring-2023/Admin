@@ -34,7 +34,6 @@ class Auth {
   static async verifyUser(event: RequestEvent): Promise<boolean> {
     const accessToken = event.cookies.get("access_token");
     const refreshToken = event.cookies.get("refresh_token");
-    console.log(accessToken);
 
     if (!accessToken && refreshToken) {
       const auth = new Auth(event);
@@ -45,9 +44,7 @@ class Auth {
     if (accessToken) {
       const publicKey = await this.getPublicKey();
 
-      console.log(publicKey);
       if (publicKey) verified = await Jwt.verify(accessToken, publicKey);
-      console.log(verified);
     }
 
     if (!verified) {
@@ -80,8 +77,6 @@ class Auth {
         body: { email, password },
       }
     );
-
-    console.log({ email, password });
 
     return response;
   }

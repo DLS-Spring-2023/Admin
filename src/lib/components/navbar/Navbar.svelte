@@ -48,7 +48,8 @@
   <div class="logo">Admin Panel</div>
   <ul class="nav-links">
     {#each links as link}
-      <li><a href={link.url}>{link.name}</a></li>
+      <li><a href={link.url}>{link.name}</a>
+      </li>
     {/each}
   </ul>
 </nav>

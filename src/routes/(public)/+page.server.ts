@@ -1,9 +1,9 @@
 import Auth from "$lib/server/auth/auth";
-import { fail, redirect } from "@sveltejs/kit";
+import { fail, redirect, type RequestEvent } from "@sveltejs/kit";
 
 /** @type {import('./$types').Actions} */
 export const actions = {
-  default: async (event) => {
+  default: async (event: RequestEvent) => {
     const { request } = event;
 
     const formData = await request.formData();
@@ -17,7 +17,6 @@ export const actions = {
       if (response.error) {
         return fail(400, { incorrect: true });
       } else {
-        console.log(response);
         throw redirect(302, `/items`);
       }
     } else {
