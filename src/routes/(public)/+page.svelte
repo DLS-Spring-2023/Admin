@@ -23,6 +23,7 @@ background-color: #ADD8E6
     margin-bottom: 0.5rem;
   }
 
+
   input {
     margin-bottom: 1rem;
     padding: 0.5rem;
@@ -36,6 +37,7 @@ background-color: #ADD8E6
     background-color: #007bff;
     color: #fff;
     border: none;
+    width: 100%;
   }
 
   p {
@@ -48,9 +50,15 @@ background-color: #ADD8E6
     margin-top: 20px;
   }
 
+  .input {
+    display: flex;
+    flex-direction: column;
+  }
+
   .form{
     display: flex;
     flex-direction: column;
+
   }
 </style>
 
@@ -64,6 +72,7 @@ background-color: #ADD8E6
 <form class="form" method="POST">
   
  
+  <div class="input">
   <label for="username">Email:</label>
   <input type="email" id="email" name="email"> 
   
@@ -71,6 +80,7 @@ background-color: #ADD8E6
   <label for="password">Password:</label>
   <input type="password" id="password" name="password"> 
   <button type="submit">Login</button> 
+</div>
 
   {#if form?.missing}<p class="error">Please provide a correct email</p>{/if}
   {#if form?.incorrect}<p class="error">Password or email incorrect. Try again</p>{/if}

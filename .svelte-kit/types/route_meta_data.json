@@ -4,5 +4,8 @@
 	],
 	"/": [],
 	"/(protected)/categories": [],
-	"/(protected)/items": []
+	"/(protected)/items": [],
+	"/(protected)/logout": [
+		"src/routes/(protected)/logout/+page.server.ts"
+	]
 }
