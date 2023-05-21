@@ -2,8 +2,6 @@
 
 import { onMount } from 'svelte'
 import type { PageData } from './$types';
-import { toast } from '@zerodevx/svelte-toast'
-import { SvelteToast } from '@zerodevx/svelte-toast'
 
 import Navbar from '../../../lib/components/navbar/Navbar.svelte';
 
@@ -62,12 +60,6 @@ const addProduct = () => {
 </script>
 
 <style>
-
-:global(.log) {
-    --toastBackground: green;
-}
-
-
 form {
 	margin: 0;
 	padding: 0;
@@ -181,7 +173,6 @@ button:hover {
 <body>
 
 <Navbar/>
-<SvelteToast options={{ classes: ['log'] }} />
 <div>
 {#if data}
 <h1>Products</h1>

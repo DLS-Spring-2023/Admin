@@ -1,7 +1,9 @@
 <script>
   let links = [
     { name: 'Products', url: '/products' },
+    { name: 'Orders', url: '/orders' },
   ]
+  
 </script>
 
 <style>

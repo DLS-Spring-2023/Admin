@@ -6,6 +6,9 @@
 	"/(protected)/logout": [
 		"src/routes/(protected)/logout/+page.server.ts"
 	],
+	"/(protected)/orders": [
+		"src/routes/(protected)/orders/+page.server.ts"
+	],
 	"/(protected)/products": [
 		"src/routes/(protected)/products/+page.server.ts"
 	]
