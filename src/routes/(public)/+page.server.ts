@@ -17,7 +17,7 @@ export const actions = {
       if (response.error) {
         return fail(400, { incorrect: true });
       } else {
-        throw redirect(302, `/items`);
+        throw redirect(302, `/products`);
       }
     } else {
       return fail(400, { missing: true });

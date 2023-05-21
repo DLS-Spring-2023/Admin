@@ -61,7 +61,7 @@ class Auth {
       event.cookies.get("access_token") &&
       event.route.id?.startsWith("/(public)")
     ) {
-      throw redirect(302, "/items");
+      throw redirect(302, "/products");
     }
 
     return !!event.cookies.get("access_token");

@@ -1,7 +1,6 @@
 <script>
   let links = [
-    { name: 'Items', url: '/items' },
-    { name: 'Categories', url: '/categories' }
+    { name: 'Products', url: '/products' },
   ]
 </script>
 

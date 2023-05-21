@@ -3,9 +3,10 @@
 		"src/routes/(public)/+page.server.ts"
 	],
 	"/": [],
-	"/(protected)/categories": [],
-	"/(protected)/items": [],
 	"/(protected)/logout": [
 		"src/routes/(protected)/logout/+page.server.ts"
+	],
+	"/(protected)/products": [
+		"src/routes/(protected)/products/+page.server.ts"
 	]
 }

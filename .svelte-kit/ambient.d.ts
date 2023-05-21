@@ -29,6 +29,7 @@ declare module '$env/static/private' {
 	export const AUTH_URL: string;
 	export const AUTH_PROJECT_ID: string;
 	export const AUTH_API_KEY: string;
+	export const PRODUCTS_SERVER_URL: string;
 	export const ALLUSERSPROFILE: string;
 	export const APPDATA: string;
 	export const ChocolateyInstall: string;
@@ -43,8 +44,6 @@ declare module '$env/static/private' {
 	export const DriverData: string;
 	export const EDITOR: string;
 	export const EFC_10308: string;
-	export const FPS_BROWSER_APP_PROFILE_STRING: string;
-	export const FPS_BROWSER_USER_PROFILE_STRING: string;
 	export const GIT_ASKPASS: string;
 	export const HOME: string;
 	export const HOMEDRIVE: string;
@@ -152,6 +151,7 @@ declare module '$env/dynamic/private' {
 		AUTH_URL: string;
 		AUTH_PROJECT_ID: string;
 		AUTH_API_KEY: string;
+		PRODUCTS_SERVER_URL: string;
 		ALLUSERSPROFILE: string;
 		APPDATA: string;
 		ChocolateyInstall: string;
@@ -166,8 +166,6 @@ declare module '$env/dynamic/private' {
 		DriverData: string;
 		EDITOR: string;
 		EFC_10308: string;
-		FPS_BROWSER_APP_PROFILE_STRING: string;
-		FPS_BROWSER_USER_PROFILE_STRING: string;
 		GIT_ASKPASS: string;
 		HOME: string;
 		HOMEDRIVE: string;
